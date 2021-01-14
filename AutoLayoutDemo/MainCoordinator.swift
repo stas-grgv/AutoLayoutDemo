@@ -8,20 +8,23 @@
 import UIKit
 
 class MainCoordinator: Coordinator {
+    
     var navigationController: UINavigationController
     
     init(_ navController: UINavigationController) {
         self.navigationController = navController
     }
     
+    
+    func start() {
+        initViewController(vc: ViewController(), navTitle: "ViewController")
+    }
+    
     func initViewController(vc: UIViewController, navTitle: String) {
         vc.view = UIView(frame: UIScreen.main.bounds)
         vc.loadView()
         vc.navigationItem.title = navTitle
+        vc.navigationItem.leftBarButtonItem = UIBarButtonItem(title: "Title", image: nil, primaryAction: nil, menu: nil)
         navigationController.pushViewController(vc, animated: true)
-    }
-    
-    func start() {
-        initViewController(vc: ViewController(), navTitle: "ViewController")
     }
 }
