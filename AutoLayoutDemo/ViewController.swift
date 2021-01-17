@@ -9,23 +9,37 @@ import UIKit
 
 class ViewController: UIViewController {
     
+    var redView: UIView!
+    weak var blueView: UIView!
+    
     override func loadView() {
         super.loadView()
         self.view.backgroundColor = .white
         
-        let button = createButton()
+//        let button = createButton()
         
-        let blueView = UIView(frame: CGRect(x: 100, y: 200, width: 200, height: 140))
+//        redView = UIView(frame: .zero)
+        let blueView = UIView(frame: .zero)
+        
+        blueView.translatesAutoresizingMaskIntoConstraints = false
+        self.view.addSubview(blueView)
         blueView.backgroundColor = .blue
         
-        view.addSubview(blueView)
-        view.addSubview(button)
+        NSLayoutConstraint.activate([
+            blueView.widthAnchor.constraint(equalToConstant: 300),
+            blueView.heightAnchor.constraint(equalToConstant: 60),
+            blueView.centerXAnchor.constraint(equalTo: view.centerXAnchor),
+            blueView.centerYAnchor.constraint(equalTo: view.centerYAnchor)
+        ])
+        self.blueView = blueView
+//        view.addSubview(button)
         //
     }
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        redView.backgroundColor = .red
     }
 
 

@@ -20,6 +20,7 @@ class MainCoordinator: Coordinator {
         initViewController(vc: ViewController(), navTitle: "ViewController")
     }
     
+    
     func initViewController(vc: UIViewController, navTitle: String) {
         vc.view = UIView(frame: UIScreen.main.bounds)
         vc.loadView()
