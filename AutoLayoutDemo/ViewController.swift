@@ -9,16 +9,16 @@ import UIKit
 
 class ViewController: UIViewController {
     
-    var redView: UIView!
+    weak var redView: UIView!
     weak var blueView: UIView!
+    weak var textView: UITextView!
     
     override func loadView() {
         super.loadView()
         self.view.backgroundColor = .white
         
-//        let button = createButton()
         
-//        redView = UIView(frame: .zero)
+        //MARK: --BLUEVIEW
         let blueView = UIView(frame: .zero)
         
         blueView.translatesAutoresizingMaskIntoConstraints = false
@@ -26,21 +26,48 @@ class ViewController: UIViewController {
         blueView.backgroundColor = .blue
         
         NSLayoutConstraint.activate([
-            blueView.widthAnchor.constraint(equalToConstant: 300),
+            blueView.widthAnchor.constraint(equalToConstant: 60),
             blueView.heightAnchor.constraint(equalToConstant: 60),
-            blueView.centerXAnchor.constraint(equalTo: view.centerXAnchor),
-            blueView.centerYAnchor.constraint(equalTo: view.centerYAnchor)
+            blueView.centerXAnchor.constraint(equalTo: view.leftAnchor, constant: 60),
+            blueView.centerYAnchor.constraint(equalTo: view.safeAreaLayoutGuide.topAnchor, constant: 60)
         ])
-        self.blueView = blueView
-//        view.addSubview(button)
-        //
+        
+        //MARK: --REDVIEW
+        
+        let redView = UIView(frame: .zero)
+        redView.backgroundColor = .red
+        
+        redView.translatesAutoresizingMaskIntoConstraints = false
+        self.view.addSubview(redView)
+        NSLayoutConstraint.activate([
+            redView.widthAnchor.constraint(equalToConstant: 120),
+            redView.heightAnchor.constraint(equalToConstant: 60),
+            redView.leftAnchor.constraint(equalTo: blueView.centerXAnchor, constant: 40),
+            redView.centerYAnchor.constraint(equalTo: blueView.centerYAnchor)
+        ])
+        
+        //MARK: -- Text View
+        
+        let textView = UITextView(frame: .zero)
+        
+        textView.translatesAutoresizingMaskIntoConstraints = false
+        textView.text = " This is the text view"
+        self.view.addSubview(textView)
+        
+        NSLayoutConstraint.activate([
+            textView.widthAnchor.constraint(equalToConstant: 120),
+            textView.heightAnchor.constraint(equalToConstant: 60),
+            textView.topAnchor.constraint(equalTo: blueView.bottomAnchor, constant: 10),
+            textView.leftAnchor.constraint(equalTo: blueView.leftAnchor)
+        ])
+
     }
     
+    
+    //MARK: --VIEW DID LOAD
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        redView.backgroundColor = .red
+        
     }
-
-
 }
