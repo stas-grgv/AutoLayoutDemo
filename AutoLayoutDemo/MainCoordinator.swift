@@ -27,6 +27,6 @@ class MainCoordinator: Coordinator {
         vc.navigationItem.title = navTitle
         vc.navigationItem.leftBarButtonItem = UIBarButtonItem(title: "Auto", image: nil, primaryAction: nil, menu: nil)
         vc.navigationItem.rightBarButtonItem = UIBarButtonItem(title: "Layout", image: nil, primaryAction: nil, menu: nil)
-        navigationController.pushViewController(vc, animated: true)
+        navigationController.pushViewController(vc, animated: false)
     }
 }

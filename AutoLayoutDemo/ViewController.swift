@@ -51,11 +51,11 @@ class ViewController: UIViewController {
         let textView = UITextView(frame: .zero)
         
         textView.translatesAutoresizingMaskIntoConstraints = false
-        textView.text = " This is the text view"
+        textView.text = "This is the text view. This is the text view. "
         self.view.addSubview(textView)
         
         NSLayoutConstraint.activate([
-            textView.widthAnchor.constraint(equalToConstant: 120),
+            textView.rightAnchor.constraint(equalTo: redView.rightAnchor),
             textView.heightAnchor.constraint(equalToConstant: 60),
             textView.topAnchor.constraint(equalTo: blueView.bottomAnchor, constant: 10),
             textView.leftAnchor.constraint(equalTo: blueView.leftAnchor)

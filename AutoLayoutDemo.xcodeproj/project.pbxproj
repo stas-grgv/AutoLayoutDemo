@@ -14,7 +14,6 @@
 		8416F31B25AFA38F0013E942 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8416F31925AFA38F0013E942 /* LaunchScreen.storyboard */; };
 		8416F32625AFAAF70013E942 /* CoordinatorProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8416F32525AFAAF70013E942 /* CoordinatorProtocol.swift */; };
 		8416F32925AFAB990013E942 /* MainCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8416F32825AFAB990013E942 /* MainCoordinator.swift */; };
-		8428178825B0843D00E2329D /* UIElements.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8428178725B0843D00E2329D /* UIElements.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -27,7 +26,6 @@
 		8416F31C25AFA38F0013E942 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		8416F32525AFAAF70013E942 /* CoordinatorProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoordinatorProtocol.swift; sourceTree = "<group>"; };
 		8416F32825AFAB990013E942 /* MainCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainCoordinator.swift; sourceTree = "<group>"; };
-		8428178725B0843D00E2329D /* UIElements.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIElements.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -63,7 +61,6 @@
 				8416F30E25AFA38D0013E942 /* AppDelegate.swift */,
 				8416F31025AFA38D0013E942 /* SceneDelegate.swift */,
 				8416F31225AFA38D0013E942 /* ViewController.swift */,
-				8428178725B0843D00E2329D /* UIElements.swift */,
 				8416F32525AFAAF70013E942 /* CoordinatorProtocol.swift */,
 				8416F32825AFAB990013E942 /* MainCoordinator.swift */,
 				8416F31725AFA38F0013E942 /* Assets.xcassets */,
@@ -146,7 +143,6 @@
 				8416F30F25AFA38D0013E942 /* AppDelegate.swift in Sources */,
 				8416F32625AFAAF70013E942 /* CoordinatorProtocol.swift in Sources */,
 				8416F32925AFAB990013E942 /* MainCoordinator.swift in Sources */,
-				8428178825B0843D00E2329D /* UIElements.swift in Sources */,
 				8416F31125AFA38D0013E942 /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
